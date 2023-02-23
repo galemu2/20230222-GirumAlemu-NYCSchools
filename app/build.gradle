@@ -36,6 +36,9 @@ android {
     buildFeatures {
         viewBinding true
     }
+    testOptions.unitTests {
+        includeAndroidResources = true
+    }
 }
 
 dependencies {
@@ -44,10 +47,6 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     // navigation
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
@@ -60,4 +59,19 @@ dependencies {
 
     // Paging 3
     implementation "androidx.paging:paging-runtime-ktx:3.1.1"
+
+    // JUnit
+    testImplementation 'junit:junit:4.13.2'
+
+    // google Truth
+    testImplementation 'com.google.truth:truth:1.1.3'
+
+    // androidX Testing
+    testImplementation "androidx.test.ext:junit-ktx:1.1.5"
+    testImplementation "androidx.test:core-ktx:1.5.0"
+    testImplementation 'org.robolectric:robolectric:4.9.2'
+
+    // Instrumented Testing
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }

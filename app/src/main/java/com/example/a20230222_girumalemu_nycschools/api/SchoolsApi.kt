@@ -14,8 +14,6 @@ class SchoolsApi {
 
             if (INSTANCE == null) {
                 synchronized(this) {
-//                    val client = OkHttpClient().newBuilder().build()
-
                     INSTANCE = Retrofit.Builder()
                         .baseUrl(BASE_URL)
                         .addConverterFactory(GsonConverterFactory.create())
