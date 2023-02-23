@@ -4,13 +4,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
+import com.example.a20230222_girumalemu_nycschools.data.ISchoolsRepository
 import com.example.a20230222_girumalemu_nycschools.data.SchoolsRepository
 import com.example.a20230222_girumalemu_nycschools.data.model.SatResult
 import com.example.a20230222_girumalemu_nycschools.util.Resource
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
-class SchoolsViewModel(private val repository: SchoolsRepository = SchoolsRepository()) :
+class SchoolsViewModel(private val repository: ISchoolsRepository = SchoolsRepository()) :
     ViewModel() {
 
     val schools = repository.getSchools().flow.cachedIn(viewModelScope)
