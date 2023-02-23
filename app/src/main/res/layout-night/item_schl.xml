@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@drawable/layout_round_corner"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/textViewHighSchoolName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:background="@drawable/item_round_corner"
+        android:fontFamily="serif"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:textColor="@color/md_theme_dark_onBackground"
+        tools:text="High school name" />
+
+    <TextView
+        android:id="@+id/textViewHighSchoolAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:background="@drawable/item_round_corner"
+        android:padding="8dp"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        tools:text="Address" />
+
+    <TextView
+        android:id="@+id/textViewHighSchoolBorough"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:background="@drawable/item_round_corner"
+        android:padding="8dp"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        tools:text="Borough" />
+
+</LinearLayout>
