@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/schoolsListFragment"
         android:name="com.example.a20230222_girumalemu_nycschools.ui.fragments.SchoolsListFragment"
-        android:label="schools"
+        android:label="@string/school_list"
         tools:layout="@layout/school_fragment" >
         <action
             android:id="@+id/action_schoolsFragment_to_satFragment"
@@ -16,7 +16,7 @@
     <fragment
         android:id="@+id/satScoreFragment"
         android:name="com.example.a20230222_girumalemu_nycschools.ui.fragments.SatScoreFragment"
-        android:label="fragment_sat_score"
+        android:label="@string/scores"
         tools:layout="@layout/sat_score_fragment" >
         <argument
             android:name="dbn"
