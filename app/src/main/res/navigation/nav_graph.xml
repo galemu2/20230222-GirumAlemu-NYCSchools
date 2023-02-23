@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/schoolsListFragment">
+    <fragment
+        android:id="@+id/schoolsListFragment"
+        android:name="com.example.a20230222_girumalemu_nycschools.ui.fragments.SchoolsListFragment"
+        android:label="schools"
+        tools:layout="@layout/school_fragment" >
+        <action
+            android:id="@+id/action_schoolsFragment_to_satFragment"
+            app:destination="@id/satScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/satScoreFragment"
+        android:name="com.example.a20230222_girumalemu_nycschools.ui.fragments.SatScoreFragment"
+        android:label="fragment_sat_score"
+        tools:layout="@layout/sat_score_fragment" >
+        <argument
+            android:name="dbn"
+            app:argType="string" />
+    </fragment>
+</navigation>
