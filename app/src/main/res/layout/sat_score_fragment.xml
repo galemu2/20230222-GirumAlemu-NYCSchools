@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.fragments.SatFragment">
+    tools:context=".ui.fragments.SatScoreFragment">
 
     <FrameLayout
         android:id="@+id/layout_loading"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="visible"
-        tools:visibility="visible">
+        tools:visibility="gone">
 
         <ProgressBar
             android:layout_width="200dp"
@@ -24,8 +23,8 @@
         android:id="@+id/layout_error"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"
         android:orientation="vertical"
+        android:visibility="gone"
         tools:visibility="gone">
 
         <TextView
@@ -35,139 +34,151 @@
             android:gravity="center_horizontal"
             android:paddingTop="200dp"
             android:textSize="30sp"
-            tools:text="Some error message"/>
+            tools:text="Some error message" />
 
         <ImageView
-            android:src="@drawable/ic_error_outline"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:src="@drawable/ic_error_outline" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/layout_satResule"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/layout_score_background"
         android:orientation="vertical"
+        android:padding="4dp"
         android:visibility="gone"
-        tools:visibility="gone">
+        tools:visibility="visible">
 
         <TextView
             android:id="@+id/textView_School"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/item_school_name_background"
             android:gravity="center"
             android:padding="8dp"
-            android:textColor="@android:color/black"
             android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             tools:hint="@string/school_name" />
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <TextView
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:padding="8dp"
-                    android:text="@string/sat_takers"
-                    android:textSize="24sp" />
+                    android:orientation="horizontal">
 
-                <TextView
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:padding="8dp"
+                        android:text="@string/sat_takers"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/textView_testTakers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textSize="24sp"
+                        tools:text="501" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:padding="8dp"
-                    android:text="@string/avg_reading"
-                    android:textSize="24sp" />
+                    android:orientation="horizontal">
 
-                <TextView
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:padding="8dp"
+                        android:text="@string/avg_reading"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/textView_avgReading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textSize="24sp"
+                        tools:text="502" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:padding="8dp"
-                    android:text="@string/avg_writing"
-                    android:textSize="24sp" />
+                    android:orientation="horizontal">
 
-                <TextView
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:padding="8dp"
+                        android:text="@string/avg_writing"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/textView_avgWriting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textSize="24sp"
+
+                        tools:text="503" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:padding="8dp"
-                    android:text="@string/avg_math"
-                    android:textSize="24sp" />
+                    android:orientation="horizontal">
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:padding="8dp"
+                        android:text="@string/avg_math"
+                        android:textSize="24sp" />
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/textView_avgMath"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textSize="24sp"
+                        tools:text="504" />
 
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView_testTakers"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="8dp"
-                    android:textSize="24sp"
-                    tools:text="26" />
-
-
-                <TextView
-                    android:id="@+id/textView_avgReading"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="8dp"
-                    android:textSize="24sp"
-                    tools:hint="335" />
-
-
-                <TextView
-                    android:id="@+id/textView_avgWriting"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="8dp"
-                    android:textSize="24sp"
-                    tools:hint="404" />
-
-
-                <TextView
-                    android:id="@+id/textView_avgMath"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="8dp"
-                    android:textSize="24sp"
-                    tools:hint="363" />
-
+                </LinearLayout>
 
             </LinearLayout>
 
 
         </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>
