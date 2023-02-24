@@ -7,6 +7,6 @@
     <string name="avg_math">Avg Math:</string>
     <string name="avg_writing">Avg Writing:</string>
     <string name="avg_reading">Avg Reading:</string>
-    <string name="scores">Schore</string>
-    <string name="school_list">NY Schools</string>
+    <string name="scores">SAT Score</string>
+    <string name="school_list">NYC Schools</string>
 </resources>
