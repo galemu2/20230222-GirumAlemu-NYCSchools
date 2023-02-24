@@ -71,7 +71,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingTop="4dp">
 
 
                 <LinearLayout
@@ -86,6 +87,7 @@
                         android:layout_weight="5"
                         android:padding="8dp"
                         android:text="@string/sat_takers"
+                        android:textColor="@android:color/white"
                         android:textSize="24sp" />
 
                     <TextView
@@ -114,6 +116,7 @@
                         android:layout_weight="5"
                         android:padding="8dp"
                         android:text="@string/avg_reading"
+                        android:textColor="@android:color/white"
                         android:textSize="24sp" />
 
                     <TextView
@@ -142,6 +145,7 @@
                         android:layout_weight="5"
                         android:padding="8dp"
                         android:text="@string/avg_writing"
+                        android:textColor="@android:color/white"
                         android:textSize="24sp" />
 
                     <TextView
@@ -172,6 +176,7 @@
                         android:layout_weight="5"
                         android:padding="8dp"
                         android:text="@string/avg_math"
+                        android:textColor="@android:color/white"
                         android:textSize="24sp" />
 
                     <TextView
